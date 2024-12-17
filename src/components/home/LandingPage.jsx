@@ -4,6 +4,8 @@ import {
   Menu, X, Award, ArrowUpRight,
   Plus, Minus
 } from 'lucide-react';
+import Login from '../Login ';
+import Register from './Register';
 
 const UltraNova = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -94,13 +96,13 @@ const UltraNova = () => {
             </div>
             
             <div className="hidden md:flex items-center space-x-12">
-              {['VISION', 'CRAFT', 'LEGACY'].map((item) => (
+              {['HOME', 'ABOUT', 'PAGE'].map((item) => (
                 <NavigationLink key={item} href={`#${item.toLowerCase()}`}>
                   {item}
                 </NavigationLink>
               ))}
               <button className="ml-8 text-xs tracking-[0.2em] font-extralight border-b border-white/20 pb-1 hover:border-white transition-colors duration-500">
-                INQUIRE
+                LOGIN
               </button>
             </div>
 
@@ -173,6 +175,9 @@ const UltraNova = () => {
         </div>
       </div>
 
+<Register/>
+<Login/>
+
       {/* Features */}
       <div className="py-32" id="craft">
         <div className="max-w-6xl mx-auto px-8">
@@ -239,10 +244,10 @@ const UltraNova = () => {
         <div className="max-w-6xl mx-auto px-8">
           <div className="flex flex-col items-center space-y-8">
             <div className="text-sm tracking-[0.5em] font-extralight">
-              NOVA
+            ULTRA NOVA
             </div>
             <div className="text-xs text-white/60 font-extralight tracking-wider">
-              © 2024 · ALL RIGHTS RESERVED
+              © {new Date().getFullYear()} · ALL RIGHTS RESERVED
             </div>
           </div>
         </div>
